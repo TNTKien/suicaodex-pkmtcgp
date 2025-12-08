@@ -1,4 +1,6 @@
-# Elysia with Bun runtime
+# SuicaoDex's Pokemon TCG Pocket "gacha" system using Elysia with Bun runtime
+
+>Its starts with Elysia and ends with Elysia
 
 ## Getting Started
 To get started with this template, simply paste this command into your terminal:
