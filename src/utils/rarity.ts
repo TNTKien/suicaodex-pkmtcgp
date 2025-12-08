@@ -13,6 +13,7 @@ export const RARITIES = [
 export type Rarity = (typeof RARITIES)[number];
 
 export const RARITY_PROBABILITIES_BY_ROW = {
+	// 1st - 3rd card in a pack
 	'1-3 card': {
 		'◊': 1,
 		'◊◊': 0,
@@ -23,6 +24,8 @@ export const RARITY_PROBABILITIES_BY_ROW = {
 		'☆☆☆': 0,
 		'♕': 0,
 	},
+
+	// 4th card in a pack
 	'4 card': {
 		'◊': 0,
 		'◊◊': 0.9,
@@ -33,6 +36,8 @@ export const RARITY_PROBABILITIES_BY_ROW = {
 		'☆☆☆': 0.00222,
 		'♕': 0.0004,
 	},
+
+	// 5th card in a pack
 	'5 card': {
 		'◊': 0,
 		'◊◊': 0.6,
