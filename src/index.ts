@@ -8,6 +8,15 @@ export default new Elysia({
 	// adapter: CloudflareAdapter,
 	aot: false,
 })
+	.onError(({ error, code, set, status }) => {
+		// customize response based on error code
+		if (code === 'NOT_FOUND') return status(404, 'NOT FOUND');
+		if (code === 'VALIDATION') return new Response(error.message, { status: 400 });
+
+		// fallback
+		console.error(error);
+		return status(500, 'Internal Server Error');
+	})
 	.get('/', () => 'Hiii~~! Kibun wa dou?')
 	.get('/philia093', () => 'See you *tomorrow*.')
 
