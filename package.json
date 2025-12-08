@@ -9,7 +9,8 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "elysia": "^1.4.18"
+    "elysia": "latest",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "bun-types": "latest",
