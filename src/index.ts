@@ -1,4 +1,5 @@
 import { Elysia } from 'elysia';
+import { cors } from '@elysiajs/cors';
 // import { CloudflareAdapter } from 'elysia/adapter/cloudflare-worker';
 import { expansions } from './modules/expansions';
 import { cards } from './modules/cards';
@@ -8,6 +9,7 @@ export default new Elysia({
 	// adapter: CloudflareAdapter,
 	aot: false,
 })
+	.use(cors())
 	.onError(({ error, code, set, status }) => {
 		// customize response based on error code
 		if (code === 'NOT_FOUND') return status(404, 'NOT FOUND');
