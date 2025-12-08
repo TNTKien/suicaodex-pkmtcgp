@@ -9,11 +9,7 @@ export default new Elysia({
 	// adapter: CloudflareAdapter,
 	aot: false,
 })
-	.use(
-		cors({
-			origin: /.*\.suicaodex\.com$/,
-		})
-	)
+	.use(cors())
 	.onError(({ error, code, set, status }) => {
 		// customize response based on error code
 		if (code === 'NOT_FOUND') return status(404, 'NOT FOUND');
