@@ -2,7 +2,10 @@
 
 >Its starts with Elysia and ends with Elysia
 
+![elysia](https://github.com/user-attachments/assets/d1f90f42-20b3-4df8-862b-f8c5a4f94f1a)
+
 ## Getting Started
+
 To get started with this template, simply paste this command into your terminal:
 ```bash
 bun create elysia ./elysia-example
