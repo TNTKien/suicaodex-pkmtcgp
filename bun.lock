@@ -7,6 +7,7 @@
       "dependencies": {
         "@elysiajs/cors": "^1.4.0",
         "elysia": "latest",
+        "elysia-http-status-code": "^1.0.9",
         "elysia-rate-limit": "^4.4.2",
         "zod": "^4.1.13",
       },
@@ -265,6 +266,8 @@
     "devalue": ["devalue@5.5.0", "", {}, "sha512-69sM5yrHfFLJt0AZ9QqZXGCPfJ7fQjvpln3Rq5+PS03LD32Ost1Q9N+eEnaQwGRIriKkMImXD56ocjQmfjbV3w=="],
 
     "elysia": ["elysia@1.4.18", "", { "dependencies": { "cookie": "^1.1.1", "exact-mirror": "0.2.5", "fast-decode-uri-component": "^1.0.1", "memoirist": "^0.4.0" }, "peerDependencies": { "@sinclair/typebox": ">= 0.34.0 < 1", "@types/bun": ">= 1.2.0", "file-type": ">= 20.0.0", "openapi-types": ">= 12.0.0", "typescript": ">= 5.0.0" }, "optionalPeers": ["@types/bun", "typescript"] }, "sha512-A6BhlipmSvgCy69SBgWADYZSdDIj3fT2gk8/9iMAC8iD+aGcnCr0fitziX0xr36MFDs/fsvVp8dWqxeq1VCgKg=="],
+
+    "elysia-http-status-code": ["elysia-http-status-code@1.0.9", "", { "peerDependencies": { "elysia": "0.7.12", "typescript": "^5.0.0" } }, "sha512-ae+R6NInUsFbzqxjm+Fax36/cCHnnIL7MfQCx7kyCtl14D16ZwIaSbAiECttX96VGSZEX1KehWmVw/zdwc/XwA=="],
 
     "elysia-rate-limit": ["elysia-rate-limit@4.4.2", "", { "dependencies": { "@alloc/quick-lru": "5.2.0", "debug": "4.3.4" }, "peerDependencies": { "elysia": ">= 1.0.0" } }, "sha512-zrtqk3BDsCZ6VhJDJMmpkGsSqs6ZFaYNU+wTHqqEprUxVa3wA5/QV9N/y1V0f34n9gz3Gpd8vlVe2CbKOWHCQA=="],
 
