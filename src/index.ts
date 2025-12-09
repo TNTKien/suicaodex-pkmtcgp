@@ -4,11 +4,13 @@ import { cors } from '@elysiajs/cors';
 import { expansions } from './modules/expansions';
 import { cards } from './modules/cards';
 import { pull } from './modules/pull';
+import { rateLimit } from 'elysia-rate-limit';
 
 export default new Elysia({
 	// adapter: CloudflareAdapter,
 	aot: false,
 })
+	.use(rateLimit())
 	.use(cors())
 	.onError(({ error, code, set, status }) => {
 		// customize response based on error code
