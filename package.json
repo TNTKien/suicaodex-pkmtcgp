@@ -11,6 +11,8 @@
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
     "elysia": "latest",
+    "elysia-http-status-code": "^1.0.9",
+    "elysia-rate-limit": "^4.4.2",
     "zod": "^4.1.13"
   },
   "devDependencies": {
