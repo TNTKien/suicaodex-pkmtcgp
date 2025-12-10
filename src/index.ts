@@ -1,15 +1,16 @@
 import { Elysia } from 'elysia';
 import { cors } from '@elysiajs/cors';
-// import { CloudflareAdapter } from 'elysia/adapter/cloudflare-worker';
+import { CloudflareAdapter } from 'elysia/adapter/cloudflare-worker';
 import { expansions } from './modules/expansions';
 import { cards } from './modules/cards';
+import { packs } from './modules/packs';
 import { pull } from './modules/pull';
 import { rateLimit } from 'elysia-rate-limit';
 import { type ApiResponse, RateLimitError } from './utils/types';
 
 export default new Elysia({
-	// adapter: CloudflareAdapter,
-	aot: false,
+	adapter: CloudflareAdapter,
+	// aot: false,
 })
 	.use(
 		rateLimit({
@@ -127,6 +128,9 @@ export default new Elysia({
 
 	//get expansions list
 	.use(expansions)
+
+	//get packs list
+	.use(packs)
 
 	//get cards list
 	.use(cards)

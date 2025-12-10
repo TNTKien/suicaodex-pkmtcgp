@@ -3,9 +3,9 @@ import { z } from 'zod';
 import { ExpansionsService } from './service';
 import { type ApiResponse } from '../../utils/types';
 
-const paramsSchema = z.object({
-	id: z.string(),
-});
+// const paramsSchema = z.object({
+// 	id: z.string(),
+// });
 
 export const expansions = new Elysia({
 	prefix: '/v4',
@@ -31,40 +31,40 @@ export const expansions = new Elysia({
 			};
 		}
 	})
-	.get('/expansions/:id', async ({ params, set }): Promise<ApiResponse> => {
-		try {
-			const parsed = paramsSchema.parse(params);
-			const exp = await ExpansionsService.getExpansionById(parsed.id);
+	// .get('/expansions/:id', async ({ params, set }): Promise<ApiResponse> => {
+	// 	try {
+	// 		const parsed = paramsSchema.parse(params);
+	// 		const exp = await ExpansionsService.getExpansionById(parsed.id);
 			
-			if (!exp) {
-				set.status = 404;
-				return {
-					success: false,
-					message: 'Expansion not found',
-					data: null,
-					error: {
-						code: 'EXPANSION_NOT_FOUND',
-						details: [{ field: 'id', message: `Expansion with id '${parsed.id}' not found` }],
-					},
-				};
-			}
+	// 		if (!exp) {
+	// 			set.status = 404;
+	// 			return {
+	// 				success: false,
+	// 				message: 'Expansion not found',
+	// 				data: null,
+	// 				error: {
+	// 					code: 'EXPANSION_NOT_FOUND',
+	// 					details: [{ field: 'id', message: `Expansion with id '${parsed.id}' not found` }],
+	// 				},
+	// 			};
+	// 		}
 			
-			return {
-				success: true,
-				message: 'Expansion retrieved successfully',
-				data: exp,
-				error: null,
-			};
-		} catch (error) {
-			set.status = 400;
-			return {
-				success: false,
-				message: 'Invalid request',
-				data: null,
-				error: {
-					code: 'VALIDATION_ERROR',
-					details: [{ message: error instanceof Error ? error.message : 'Invalid request' }],
-				},
-			};
-		}
-	});
+	// 		return {
+	// 			success: true,
+	// 			message: 'Expansion retrieved successfully',
+	// 			data: exp,
+	// 			error: null,
+	// 		};
+	// 	} catch (error) {
+	// 		set.status = 400;
+	// 		return {
+	// 			success: false,
+	// 			message: 'Invalid request',
+	// 			data: null,
+	// 			error: {
+	// 				code: 'VALIDATION_ERROR',
+	// 				details: [{ message: error instanceof Error ? error.message : 'Invalid request' }],
+	// 			},
+	// 		};
+	// 	}
+	// });

@@ -11,4 +11,6 @@ bun install
 bun dev
 ```
 
-Open http://127.0.0.1:8787/ with your browser to see the result.
+## Limitations
+
+**No Database**: This project does not have any databases. It uses [pokemon-tcg-pocket-cards](https://github.com/chase-manning/pokemon-tcg-pocket-cards) as data source. 
