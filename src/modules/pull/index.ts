@@ -68,10 +68,7 @@ export const pull = new Elysia({
 		return {
 			success: true,
 			message: `Successfully pulled ${pulledCards.length} cards from pack '${pack}'`,
-			data: {
-				pack,
-				cards: pulledCards,
-			},
+			data: pulledCards,
 			error: null,
 		};
 	} catch (error) {
